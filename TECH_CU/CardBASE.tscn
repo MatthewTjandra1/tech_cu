@@ -1,0 +1,199 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Card/CardBASE.gd" type="Script" id=1]
+[ext_resource path="res://Card/CardBorder.png" type="Texture" id=2]
+[ext_resource path="res://BackCard.png" type="Texture" id=3]
+[ext_resource path="res://zoomborder.png" type="Texture" id=4]
+
+[node name="CardBASE" type="MarginContainer"]
+margin_right = 250.0
+margin_bottom = 350.0
+rect_pivot_offset = Vector2( 125, 175 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Card" type="Sprite" parent="."]
+centered = false
+
+[node name="Border" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Text" type="VBoxContainer" parent="."]
+margin_right = 250.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopSpace" type="MarginContainer" parent="Text"]
+margin_right = 250.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Name" type="HBoxContainer" parent="Text"]
+margin_top = 29.0
+margin_right = 250.0
+margin_bottom = 43.0
+
+[node name="Name" type="MarginContainer" parent="Text/Name"]
+margin_right = 250.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Text/Name/Name"]
+margin_right = 250.0
+margin_bottom = 14.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Text/Name/Name"]
+margin_right = 250.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Text/Name/Name/CenterContainer"]
+margin_left = 107.0
+margin_right = 142.0
+margin_bottom = 14.0
+text = "Blank"
+
+[node name="Spacer" type="MarginContainer" parent="Text"]
+margin_top = 47.0
+margin_right = 250.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 0, 113 )
+
+[node name="Type" type="HBoxContainer" parent="Text"]
+margin_top = 164.0
+margin_right = 250.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Type" type="MarginContainer" parent="Text/Type"]
+margin_right = 250.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Text/Type/Type"]
+margin_right = 250.0
+margin_bottom = 20.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Text/Type/Type"]
+margin_right = 250.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="Text/Type/Type/CenterContainer"]
+margin_left = 108.0
+margin_top = 3.0
+margin_right = 142.0
+margin_bottom = 17.0
+text = "None"
+
+[node name="Description" type="HBoxContainer" parent="Text"]
+margin_top = 188.0
+margin_right = 250.0
+margin_bottom = 202.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="MarginContainer" parent="Text/Description"]
+margin_right = 250.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Text/Description/Name"]
+margin_right = 250.0
+margin_bottom = 14.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Text/Description/Name"]
+margin_right = 250.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Text/Description/Name/CenterContainer"]
+margin_left = 72.0
+margin_right = 177.0
+margin_bottom = 14.0
+text = "Description Text"
+
+[node name="Spacer3" type="MarginContainer" parent="Text"]
+margin_top = 206.0
+margin_right = 250.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_vertical = 3
+
+[node name="HPDMG" type="HBoxContainer" parent="Text"]
+margin_top = 312.0
+margin_right = 250.0
+margin_bottom = 326.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP Spacer" type="MarginContainer" parent="Text/HPDMG"]
+margin_right = 25.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 25, 0 )
+
+[node name="HP" type="MarginContainer" parent="Text/HPDMG"]
+margin_left = 29.0
+margin_right = 47.0
+margin_bottom = 14.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Text/HPDMG/HP"]
+margin_right = 18.0
+margin_bottom = 14.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Text/HPDMG/HP"]
+margin_right = 18.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Text/HPDMG/HP/CenterContainer"]
+margin_right = 18.0
+margin_bottom = 14.0
+text = "HP"
+
+[node name="HP-DMG Spacer" type="MarginContainer" parent="Text/HPDMG"]
+margin_left = 51.0
+margin_right = 151.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="DMG" type="MarginContainer" parent="Text/HPDMG"]
+margin_left = 155.0
+margin_right = 187.0
+margin_bottom = 14.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Text/HPDMG/DMG"]
+margin_right = 32.0
+margin_bottom = 14.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Text/HPDMG/DMG"]
+margin_right = 32.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Text/HPDMG/DMG/CenterContainer"]
+margin_right = 32.0
+margin_bottom = 14.0
+text = "DMG"
+
+[node name="Spacer2" type="MarginContainer" parent="Text"]
+margin_top = 330.0
+margin_right = 250.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="CardBack" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Zoom" type="TextureButton" parent="."]
+margin_right = 250.0
+margin_bottom = 350.0
+texture_hover = ExtResource( 4 )
+expand = true
+
+[connection signal="mouse_entered" from="Zoom" to="." method="_on_Zoom_mouse_entered"]
+[connection signal="mouse_exited" from="Zoom" to="." method="_on_Zoom_mouse_exited"]
